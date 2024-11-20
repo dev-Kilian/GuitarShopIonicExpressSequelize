@@ -62,3 +62,9 @@ MySQL - Sistema de gestión de base de datos.
 
 Autor ✒️
 @dev-Kilian - Desarrollador principal
+
+POSTMAN API DOCUMENTATION:
+
+![image](https://github.com/user-attachments/assets/0c522615-8312-4c7e-bdfc-37f493b321fb)
+https://documenter.getpostman.com/view/39887586/2sAYBSiYVD
+
