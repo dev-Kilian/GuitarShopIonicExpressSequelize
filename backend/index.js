@@ -1,6 +1,19 @@
 const express = require("express");
+const cors = require("cors");
+
+//UT3 (Multer):
+var path = require('path');
 
 const app = express();
+
+//UT3 (Multer):
+app.use(express.static(path.join(__dirname, 'public')));
+
+var corsOptions = {
+    origin: "http://localhost:8100"
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 
@@ -8,8 +21,8 @@ app.use(express.urlencoded({extended: true}));
 
 const db = require("./models");
 
-db.sequelize.sync({force: true}).then(() => {
-    console.log("Drop and re-sync db.");
+db.sequelize.sync({}).then(() => { // en vez de force: true si se pone alter: true se evita el borrado de datos
+    console.log("Re-sync db.");
 })
 
 app.get("/", (req, res) => {

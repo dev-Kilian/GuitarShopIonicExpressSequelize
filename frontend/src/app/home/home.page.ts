@@ -7,9 +7,6 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
-  brand: string = "Ibanez";
-  model: string = "Gio";
   constructor(private router: Router) {}
 
   gotoMyGuitars() {
